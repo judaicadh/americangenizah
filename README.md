@@ -22,14 +22,25 @@ src/
  
  
 └── pages/
+    
     ├── index.astro                     ← homepage / global search
+    
     ├── item/
+    
     │   └── [slug].astro                ← page for each letter/document/item
+    
     ├── institution/
+    
     │   └── [slug].astro                ← page for contributing institution
+    
     ├── person/
+    
     │   └── [slug].astro                ← page for person or organization 
+    
     ├── place/
+    
     │   └── [slug].astro                ← pages for geographic locations
+    
     └── corpus/
+    
         └── [slug].astro                ← page for each corpus
