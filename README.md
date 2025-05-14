@@ -15,16 +15,21 @@ src/
  
  │   ├── Map.tsx                 React Leaflet map with geolocation pins
  
- │   └── Timeline.tsx            Date histogram or slider (optional)
+ │   └── Timeline.tsx            Date histogram or slider 
  
- ├── data/letters.json          Raw metadata for indexing
+ ├── data/items.json          Raw metadata for indexing
  
- ├── pages/
  
- │   ├── index.astro             Search landing page
  
- │   ├── letter/[slug].astro     Individual letter detail pages
- 
- │   ├── person/[slug].astro     Linked person pages
- 
- │   └── topic/[slug].astro      Linked topic pages
+└── pages/
+    ├── index.astro                     ← homepage / global search
+    ├── item/
+    │   └── [slug].astro                ← page for each letter/document/item
+    ├── institution/
+    │   └── [slug].astro                ← page for contributing institution
+    ├── person/
+    │   └── [slug].astro                ← page for person or organization 
+    ├── place/
+    │   └── [slug].astro                ← pages for geographic locations
+    └── corpus/
+        └── [slug].astro                ← page for each corpus
