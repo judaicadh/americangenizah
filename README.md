@@ -9,13 +9,13 @@ An international initiative to integrate digital technologies into the way we st
 
 src/
 
- ├── components/
+ └──  components/
+	
+		├── Search.tsx              Algolia InstantSearch UI
  
- │   ├── Search.tsx              Algolia InstantSearch UI
+		├── Map.tsx                 React Leaflet map with geolocation pins
  
- │   ├── Map.tsx                 React Leaflet map with geolocation pins
- 
- │   └── Timeline.tsx            Date histogram or slider 
+  ├── Timeline.tsx            Date histogram or slider 
  
  ├── data/items.json          Raw metadata for indexing
  
