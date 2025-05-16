@@ -60,8 +60,7 @@ module.exports = withMT({
             },
 
             fontFamily: {
-                sans: ['var(--font-sans)'],
-                serif: ['var(--font-serif)'],
+                serif: ['Oswald', 'sans-serif']
             },
         },
     },
