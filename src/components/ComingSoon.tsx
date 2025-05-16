@@ -31,7 +31,7 @@ export const ComingSoon: FC = () => (
             </p>
 
             <a
-                href="/about"
+                href="/americangenizah/about"
                 className="inline-block rounded bg-gray-100/10 px-6 py-3 text-lg font-medium text-white
                    ring-1 ring-white/40 backdrop-blur-sm
                    hover:bg-white/10 hover:underline focus:outline-none focus:ring-2
