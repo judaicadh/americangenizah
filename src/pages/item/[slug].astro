@@ -1,0 +1,48 @@
+---
+import { getAllItems, getItemBySlug } from '../../types/getItems';
+
+// 1.  Tell Astro which pages to build.
+export function getStaticPaths() {
+    const paths = getAllItems()
+        .filter((it) => typeof it.slug === 'string' && it.slug.trim())   // keep only good ones
+        .map((it) => ({
+            params: { slug: it.slug },
+            props:  { item: it },
+        }));
+
+    return paths;
+}
+// 2.  Type‑safe prop coming from getStaticPaths.
+const { item } = Astro.props;  // item is `Item` from helper
+---
+
+<html lang="en">
+<head>
+    <title>{item.title}</title>
+</head>
+<body class="prose mx-auto p-6">
+<h1 class="font-serif text-3xl mb-2">{item.title}</h1>
+<p class="text-sm text-gray-500">{item.dateWritten}</p>
+
+<dl class="my-4 grid grid-cols-[max-content_1fr] gap-2 text-sm">
+    <dt class="font-medium">Sender:</dt><dd>{item.creators}</dd>
+    <dt class="font-medium">Recipient:</dt><dd>{item.contributors}</dd>
+    <dt class="font-medium">Institution:</dt>
+    <dd><a href={`/institution/${item.institution}`}>{item.institution}</a></dd>
+    <dt class="font-medium">Place:</dt>
+    <dd><a href={`/place/${item.place}`}>{item.place}</a></dd>
+    <dt class="font-medium">Corpus:</dt>
+    <dd><a href={`/corpus/${item.corpus}`}>{item.corpus}</a></dd>
+</dl>
+
+{/* IIIF viewer (simple iframe placeholder – replace with real viewer) */}
+<iframe
+        src={`https://view.niiif.io/?manifest=${encodeURIComponent(item.hasFormat)}`}
+        class="w-full h-96 border rounded mb-6"
+        loading="lazy"
+></iframe>
+
+<h2 class="font-slab text-xl mb-2">Transcript</h2>
+<pre class="whitespace-pre-wrap">{item.tei}</pre>
+</body>
+</html>

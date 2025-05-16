@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchComponent from '../components/Search.tsx';
+
+const url = new URL(Astro.request.url);
+const query = url.searchParams.get('query') || '';
+---
+
+<BaseLayout title="Search Results" description={`Search results for "${query}"`}>
+    <SearchComponent client:only="react" initialQuery={query} />
+</BaseLayout>

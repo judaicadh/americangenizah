@@ -7,13 +7,17 @@ import react from '@astrojs/react';
 
 import partytown from '@astrojs/partytown';
 
+import netlify from '@astrojs/netlify';
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.judaicadhpenn.org",
-  base: "/americangenizah",
+  site: 'https://judaicadh.github.io',
+  base: 'americangenizah',
+
   vite: {
     plugins: [tailwindcss()]
   },
 
-  integrations: [react(), partytown()]
+  integrations: [react(), partytown()],
+  adapter: netlify()
 });

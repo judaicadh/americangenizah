@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import "../styles/global.css";
+
+export const title = "About the Jesselson‑Kaplan American Genizah Project";
+export const description = "Background, history, and acknowledgements for the American Genizah digital initiative.";
+---
+<!--
+  ABOUT PAGE – Tailwind CSS + Astro
+  Compliments the full‑bleed hero style used on the Coming‑Soon splash.
+-->
+<BaseLayout title={title}>
+<!-- HERO SECTION -->
+<section
+        class="relative flex items-center justify-center text-center bg-cover bg-center min-h-[60vh] md:min-h-[70vh]"
+        style="background-image:url('https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&w=2940&q=80');"
+>
+    <span class="absolute inset-0 bg-gradient-to-tl from-gray-900 to-slate-800 opacity-80"></span>
+
+    <div class="relative z-10 px-6 max-w-3xl mx-auto">
+        <h1 class="font-extrabold tracking-tight text-white text-3xl md:text-5xl lg:text-6xl leading-tight mb-4">
+            About the <span class="whitespace-nowrap">Jesselson-Kaplan </span>
+
+        </h1>
+        <h4 class="font-extrabold tracking-tight text-white   leading-tight mb-4">  <span class="whitespace-nowrap">American Genizah Project</span></h4>
+        <p class="text-white/85 text-base md:text-lg max-w-xl mx-auto">
+            Background, history, and the people who make it possible.
+        </p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="px-4 py-16 md:py-24 max-w-screen-lg mx-auto prose prose-slate dark:prose-invert">
+
+    <h2 class="text-2xl">Background</h2>
+    <br>
+    <p>
+        The Jesselson–Kaplan American Genizah Project is an international initiative to integrate digital technologies into the way we study early American Jewry. Its primary goal is to create an open‑access digital repository—or “genizah”—of physically dispersed primary sources that document the development of Jewish life in the Western Hemisphere from the 16<sup>th</sup>–19<sup>th</sup> centuries.
+    </p>
+    <br>
+    <p>Historically, the term <em>genizah</em> refers to an informal storage area where fragile Jewish documents—considered religiously significant yet ritually unfit—are held until they receive a dignified burial. The most famous example is the attic genizah of the Ben Ezra Synagogue in Fustat (Old Cairo), whose 200,000‑plus fragments, dating from the 9<sup>th</sup> century CE, were dispersed worldwide after their 19<sup>th</sup>‑century discovery. Inspired by the digital reunification of those fragments, our project applies similar methods to Americana.
+    </p>
+    <br>
+    <p>
+        In the late 1990s the Penn Libraries, funded by alumnus Jeffrey Keil (W’65, PAR ’91), partnered with Cambridge University Libraries to develop digital tools that could discover new intellectual matches among scattered Cairo‑genizah fragments (<a href="http://sceti.library.upenn.edu/genizah/index.cfm" target="_blank" rel="noopener">project site</a>). That proof‑of‑concept showed how full‑text search of digitised manuscripts could unlock otherwise hidden connections.
+    </p>
+    <br>
+    <p>
+        Building on that success, the Jesselson‑Kaplan American Genizah Project now leverages IIIF, full‑text transcription, and linked‑data techniques to reunite dispersed archival documents, periodicals, and printed works relating to Jewish life in the Americas.
+    </p>
+    <br>
+    <h2 class="text-2xl">Project History</h2>
+    <br>
+    <p>
+        In January 2006 a small group of scholars, librarians, and private collectors formed a National Advisory Committee to plan the digitisation of rare Judaica Americana. The catalyst was a conversation between collector Arnold Kaplan and curator Arthur Kiron about providing open access to the Kaplans’ significant yet inaccessible collection. Their discussions gained urgency as auction sites—including eBay and Raynor’s Historical Collectibles—continued to disperse manuscript material. Dr Gary Zola of the Jacob Rader Marcus American Jewish Archives convened the initial calls and advocated for formalising the committee. He also founded the <em>Isaac Mayer Wise Digital Archive</em> (<a href="http://americanjewisharchives.org/wise/home.php" target="_blank" rel="noopener">JRM‑AJA site</a>).
+    </p>
+    <br>
+    <h2 class="text-2xl">National Advisory Committee</h2>
+    <br>
+    <ul>
+        <li><strong>Michael Jesselson</strong> – Board member, American Jewish Historical Society; private collector</li>
+        <li><strong>Arnold Kaplan</strong> – Board member, American Jewish Historical Society; private collector</li>
+        <li><strong>Dr. Arthur Kiron</strong> – Schottenstein‑Jesselson Curator of Judaica Collections &amp; Adjunct Assistant Professor of History, University of Pennsylvania</li>
+        <li><strong>Professor Jonathan Sarna</strong> – Joseph H. &amp; Belle R. Braun Professor of American Jewish History, Brandeis University</li>
+        <li><strong>Dr Lance Sussman</strong> – Biographer of Isaac Leeser; Rabbi, Congregation Keneseth Israel</li>
+        <li><strong>Dr Gary Zola</strong> – Executive Director, Jacob Rader Marcus Center of the American Jewish Archives</li>
+    </ul>
+<br>
+    <h2 class="text-2xl">Acknowledgements</h2>
+    <br>
+    <p>
+        The project is named in honour of Michael Jesselson and Arnold Kaplan, whose generous support—both time and funding—continues to shape our work. Their partnership illustrates how private collectors and public institutions can collaborate for the public good without compromising their distinct missions.
+    </p>
+    <br>
+    <p>
+        The University of Pennsylvania Libraries have been leaders in creating freely accessible, archival‑quality digital collections since 1996. Through the Schoenberg Center for Electronic Text &amp; Image (<a href="http://sceti.library.upenn.edu/index.cfm" target="_blank" rel="noopener">SCETI</a>), Penn has digitised and served primary sources ranging from medieval manuscripts to modern ephemera, developing open tools that support teaching and research worldwide.
+    </p>
+</main>
+</BaseLayout>

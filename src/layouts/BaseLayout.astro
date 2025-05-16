@@ -1,0 +1,33 @@
+---
+export interface Props {
+    title: string;
+    description?: string;
+}
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro"; // Adjust the path as needed
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description || 'The Jesselson-Kaplan American Genizah Project, founded in 2006, is an international initiative to integrate digital technologies into the way we study early American Jewry.  Its primary goal is to create an open access digital repository or “genizah” of physically dispersed primary sources that document the development of Jewish life in the western hemisphere from the 16th-19th centuries.'} />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description || ''} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/preview.png" />
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+<Navbar></Navbar>
+<main class="max-w-screen-xl mx-auto  ">
+    <slot />
+</main>
+<footer class="text-sm text-gray-500 text-center py-6">
+    Built by Judaica DH at Penn Libraries· &copy; {new Date().getFullYear()}
+</footer>
+</body>
