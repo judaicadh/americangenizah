@@ -16,7 +16,7 @@ export const ComingSoon: FC = () => (
             <h1 className="mb-4 font-extrabold tracking-tight text-white
                      text-4xl md:text-6xl lg:text-7xl leading-tight">
                 Re-imagining the
-                <br className="hidden md:block" />
+
                 American Genizah
             </h1>
 
@@ -37,7 +37,7 @@ export const ComingSoon: FC = () => (
                    hover:bg-white/10 hover:underline focus:outline-none focus:ring-2
                    focus:ring-offset-2 focus:ring-white transition"
             >
-                Learn more about the Genizah Project
+                Learn more about the Jesselson-Kaplan American Genizah Project
             </a>
         </div>
     </section>
